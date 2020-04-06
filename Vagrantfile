@@ -55,6 +55,9 @@ Vagrant.configure("2") do |config|
 
     # Customize the amount of memory on the VM:
     vb.memory = "4096"
+
+    # Set the right graphics controller for the VM to boot on Ubuntu 18.04 / Version 5.2.34_Ubuntu r133883
+    vb.customize ["modifyvm", :id, "--graphicscontroller", "vboxvga"]
   end
   #
   # View the documentation for the provider you are using for more
