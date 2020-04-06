@@ -59,15 +59,10 @@ Vagrant.configure("2") do |config|
     # Set the right graphics controller for the VM to boot on Ubuntu 18.04 / Version 5.2.34_Ubuntu r133883
     vb.customize ["modifyvm", :id, "--graphicscontroller", "vboxvga"]
   end
-  #
-  # View the documentation for the provider you are using for more
-  # information on available options.
 
-  # Enable provisioning with a shell script. Additional provisioners such as
-  # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
-  # documentation for more information about their specific syntax and use.
-  # config.vm.provision "shell", inline: <<-SHELL
-  #   apt-get update
-  #   apt-get install -y apache2
-  # SHELL
+  # Run the ansible playbook to update any outstanding apt packages
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "ansible-upgrade.yml"
+  end
+
 end
