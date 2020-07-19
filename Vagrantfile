@@ -39,10 +39,10 @@ Vagrant.configure("2") do |config|
   # your network.
   # config.vm.network "public_network"
 
-  # Share an additional folder to the guest VM. The first argument is
-  # the path on the host to the actual folder. The second argument is
-  # the path on the guest to mount the folder. And the optional third
-  # argument is a set of non-required options.
+  # Share an additional folder to the guest VM.
+  # The first argument is the path on the host to the actual folder.
+  # The second argument is the path on the guest to mount the folder.
+  # And the optional third argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
 
   # Provider-specific configuration so you can fine-tune various
@@ -53,7 +53,7 @@ Vagrant.configure("2") do |config|
     # Display the VirtualBox GUI when booting the machine
     vb.gui = true
 
-    # Customize the amount of memory on the VM:
+    # Customize the amount of memory on the VM
     vb.memory = "4096"
 
     # Set the right graphics controller for the VM to boot on Ubuntu 18.04 / Version 5.2.34_Ubuntu r133883
