@@ -1,0 +1,13 @@
+---
+- name: Start PostgreSQL now, and on every future boot
+  service:
+    name: postgresql
+    state: started
+    enabled: yes
+  become: true
+
+- name: Initialise metasploit database
+  shell:
+    cmd: msfdb init
+    creates: /usr/share/metasploit-framework/config/database.yml
+  become: true
