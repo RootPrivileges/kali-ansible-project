@@ -1,0 +1,10 @@
+---
+- name: Create home directories
+  file:
+    path: ~/{{ item }}
+    state: directory
+  with_items:
+    - bin
+    - exploits
+    - repo
+    - src

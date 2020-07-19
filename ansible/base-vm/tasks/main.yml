@@ -5,4 +5,6 @@
 - include: grub.yml
   become: true
 
+- include: folders.yml
+
 - include: metasploit.yml
