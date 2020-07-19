@@ -1,3 +1,6 @@
 ---
 - include: update.yml
   become: true
+
+- include: grub.yml
+  become: true

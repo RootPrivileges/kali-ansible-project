@@ -1,0 +1,11 @@
+---
+- name: Skip GRUB menu during boot
+  lineinfile:
+    path: /etc/default/grub
+    regexp: "^GRUB_TIMEOUT="
+    line: GRUB_TIMEOUT=0
+  register: grubfile
+
+- name: Update GRUB
+  command: update-grub
+  when: grubfile.changed
