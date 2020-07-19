@@ -1,0 +1,14 @@
+---
+- name: Create user's qterminal.ini file
+  copy:
+    src: /etc/xdg/qterminal.org/qterminal.ini
+    dest: ~/.config/qterminal.org/qterminal.ini
+    remote_src: yes
+
+- name: Set scrollback history to unlimited
+  lineinfile:
+    path: ~/.config/qterminal.org/qterminal.ini
+    regex: "^HistoryLimited=true$"
+    line: "HistoryLimited=false"
+    state: present
+    insertafter: '^\[General\]$'

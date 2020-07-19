@@ -8,3 +8,5 @@
 - include: folders.yml
 
 - include: metasploit.yml
+
+- include: terminal.yml
