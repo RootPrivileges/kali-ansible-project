@@ -1,0 +1,16 @@
+---
+- name: Upgrade all packages
+  apt:
+    upgrade: full
+    update_cache: yes
+    cache_valid_time: 3600
+    autoremove: yes
+
+- name: Check for reboot-required file
+  stat:
+    path: /var/run/reboot-required
+  register: reboot_required
+
+- name: Reboot if reboot-required file exists
+  reboot:
+  when: reboot_required.stat.exists == true

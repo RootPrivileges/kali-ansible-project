@@ -63,9 +63,10 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--graphicscontroller", "vboxvga"]
   end
 
-  # Run the ansible playbook to update any outstanding apt packages
+  # Run the ansible playbook to configure the host
   config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "ansible-upgrade.yml"
+    ansible.playbook = "kali-build.yml"
+    ansible.extra_vars = { ansible_python_interpreter:"/usr/bin/python3" }
   end
 
 end
