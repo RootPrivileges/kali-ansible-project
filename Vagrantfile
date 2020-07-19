@@ -45,6 +45,9 @@ Vagrant.configure("2") do |config|
   # And the optional third argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
 
+  # Replace 'default' in Vagrant messages with 'kali'
+  config.vm.define "kali"
+
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
