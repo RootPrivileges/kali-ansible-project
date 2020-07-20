@@ -1,0 +1,12 @@
+---
+- name: Install open-vm-tools-desktop
+  apt:
+    name: open-vm-tools-desktop
+    state: present
+  when: packer_builder_type == 'vmware'
+
+- name: Install virtualbox-guest-x11
+  apt:
+    name: virtualbox-guest-x11
+    state: present
+  when: packer_builder_type == 'virtualbox'

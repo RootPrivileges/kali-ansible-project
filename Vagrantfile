@@ -66,7 +66,10 @@ Vagrant.configure("2") do |config|
   # Run the ansible playbook to configure the host
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "kali-build.yml"
-    ansible.extra_vars = { ansible_python_interpreter:"/usr/bin/python3" }
+    ansible.extra_vars = {
+      ansible_python_interpreter: "/usr/bin/python3",
+      packer_builder_type: "virtualbox"
+    }
   end
 
 end
