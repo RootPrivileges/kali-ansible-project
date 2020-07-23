@@ -12,4 +12,7 @@
 
 - include: metasploit.yml
 
+- include: nikto.yml
+  become: true
+
 - include: terminal.yml
