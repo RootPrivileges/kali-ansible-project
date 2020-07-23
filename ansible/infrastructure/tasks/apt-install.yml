@@ -6,3 +6,14 @@
       - kali-tools-vulnerability
       - offsec-pwk
     state: present
+
+- name: Install other infrastructure packages
+  apt:
+    name:
+      - finger
+      - ldap-utils
+      - ridenum
+      - rsh-client
+      - rwho
+      - wmis
+    state: present
