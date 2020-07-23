@@ -1,0 +1,6 @@
+---
+- name: Install Kali web metapackage
+  apt:
+    name:
+      - kali-tools-web
+    state: present

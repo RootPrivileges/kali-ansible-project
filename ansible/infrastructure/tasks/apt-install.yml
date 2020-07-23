@@ -1,0 +1,8 @@
+---
+- name: Install Kali infrastructure metapackages
+  apt:
+    name:
+      - kali-tools-database
+      - kali-tools-vulnerability
+      - offsec-pwk
+    state: present

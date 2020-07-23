@@ -1,0 +1,7 @@
+---
+- name: Install Kali wireless metapackages
+  apt:
+    name:
+      - kali-tools-sniffing-spoofing
+      - kali-tools-wireless
+    state: present
