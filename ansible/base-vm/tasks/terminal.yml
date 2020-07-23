@@ -1,5 +1,5 @@
 ---
-- name: Create user's qterminal.ini file
+- name: Create qterminal config directory
   file:
     path: ~/.config/qterminal.org
     state: directory
@@ -9,6 +9,7 @@
     src: /etc/xdg/qterminal.org/qterminal.ini
     dest: ~/.config/qterminal.org/qterminal.ini
     remote_src: yes
+    force: no
 
 - name: Set terminal scrollback history to unlimited
   lineinfile:
