@@ -2,12 +2,12 @@
 - include: update.yml
   become: true
 
+- include: apt-install.yml
+  become: true
+
 - include: folders.yml
 
 - include: grub.yml
-  become: true
-
-- include: guest-tools.yml
   become: true
 
 - include: metasploit.yml

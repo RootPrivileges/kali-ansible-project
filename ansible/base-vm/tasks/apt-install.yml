@@ -1,0 +1,10 @@
+---
+- include: guest-tools.yml
+
+- name: Install additional utilities
+  apt:
+    name:
+      - chromium
+      - filezilla
+      - htop
+    state: present
