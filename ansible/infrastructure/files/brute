@@ -5,14 +5,15 @@ sub brute {
 	my ($host, $port, $password) = @_;
 
 	$telnet = new Net::Telnet ( Port => $port,
-				    Host => $host,
-				    Timeout => 1,
-				    Errmode => 'die');
+								Host => $host,
+								Timeout => 1,
+								Errmode => 'die');
 
 	$telnet->waitfor('/password[: ]*$/i');
 	$telnet->print($password);
 
 	($prematch, $match) = $telnet->waitfor(-match => '/>$/i',
+					       -match => '/#$/i',
 					       -match => '/password[: ]*$/i');
 
 	if ($match =~ />$/i)
@@ -20,8 +21,13 @@ sub brute {
 		$telnet->close;
 		return (1);
 	}
+	elsif ($match =~ /#$/i)
+	{
+		$telnet->close;
+		return (2);
+	}
 	else
-	{	
+	{
 		$telnet->close;
 		return (0);
 	}

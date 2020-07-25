@@ -59,7 +59,7 @@ if(defined $args{a})
 	@wordlist = `cat $args{a}`;
 }
 else
-{	
+{
 	@wordlist = ( "cisco", "ciscos", "cisco1", "router", "router1", "admin", "Admin" ) ;
 }
 
@@ -121,6 +121,17 @@ foreach(@hosts)
 			if (defined $logfile)
 			{
 				print LOG "Password Found: $password\n";
+			}
+		}
+		elsif ($ret eq 2)
+		{
+			if (!defined $quiet)
+			{
+				print "Enable Password Found: $password\n";
+			}
+			if (defined $logfile)
+			{
+				print LOG "Enable Password Found: $password\n";
 			}
 		}
 		else
@@ -219,7 +230,7 @@ foreach(@hosts)
 	{
 		print LOG "\n---------------------------------------------------\n\n";
 	}
-	
+
 }
 
 if (!defined $quiet)

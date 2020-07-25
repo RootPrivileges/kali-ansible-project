@@ -2,5 +2,8 @@
 - include: apt-install.yml
   become: true
 
+- include: cisco-auditing-tool-fix.yml
+  become: true
+
 - include: openvas.yml
   become: true

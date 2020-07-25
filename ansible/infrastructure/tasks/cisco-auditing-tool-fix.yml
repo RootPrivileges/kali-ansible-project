@@ -1,0 +1,13 @@
+---
+# Modifications to cisco-audit-tool to detect brute-forced enable password
+# Originally detailed in https://www.question-defense.com/2013/01/04/cisco-auditing-tool-additional-enable-password-confirmation-added
+
+- name: Copy fixed CAT file
+  copy:
+    src: CAT
+    dest: /usr/bin/CAT
+
+- name: Copy fixed brute file
+  copy:
+    src: brute
+    dest: /usr/share/cisco-auditing-tool/plugins/brute
