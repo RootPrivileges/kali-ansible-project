@@ -1,0 +1,7 @@
+---
+- name: Install Kali password metapackages
+  apt:
+    name:
+      - kali-tools-gpu
+      - kali-tools-passwords
+    state: present

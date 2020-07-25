@@ -1,0 +1,6 @@
+---
+- name: Install Kali forensics metapackage
+  apt:
+    name:
+      - kali-tools-forensics
+    state: present

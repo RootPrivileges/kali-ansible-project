@@ -1,0 +1,7 @@
+---
+- name: Install Kali radio metapackages
+  apt:
+    name:
+      - kali-tools-rfid
+      - kali-tools-sdr
+    state: present

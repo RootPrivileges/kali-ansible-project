@@ -3,6 +3,10 @@
   gather_facts: yes
   roles:
     - ansible/base-vm
+    - ansible/forensics
+    - ansible/fuzzing
     - ansible/infrastructure
+    - ansible/passwords
+    - ansible/radio
     - ansible/web-applications
     - ansible/wireless

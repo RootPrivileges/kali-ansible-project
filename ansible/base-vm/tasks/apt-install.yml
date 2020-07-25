@@ -1,10 +1,21 @@
 ---
 - include: guest-tools.yml
 
-- name: Install additional utilities
+- name: Install additional headless utilities
+  apt:
+    name:
+      - htop
+    state: present
+
+- name: Install additional GUI utilities
   apt:
     name:
       - chromium
       - filezilla
-      - htop
+    state: present
+
+- name: Install Kali reporting metapackage
+  apt:
+    name:
+      - kali-tools-reporting
     state: present

@@ -3,6 +3,8 @@
   apt:
     name:
       - kali-tools-database
+      - kali-tools-information-gathering
+      - kali-tools-voip
       - kali-tools-vulnerability
       - offsec-pwk
     state: present

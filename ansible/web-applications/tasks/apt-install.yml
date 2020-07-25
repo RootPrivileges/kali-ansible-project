@@ -1,6 +1,7 @@
 ---
-- name: Install Kali web metapackage
+- name: Install Kali web metapackages
   apt:
     name:
       - kali-tools-web
+      - offsec-awae
     state: present
