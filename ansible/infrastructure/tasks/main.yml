@@ -1,3 +1,6 @@
 ---
 - include: apt-install.yml
   become: true
+
+- include: openvas.yml
+  become: true

@@ -1,0 +1,10 @@
+---
+- name: Disable OpenVAS services
+  service:
+    name: "{{ item }}"
+    state: stopped
+    enabled: no
+  with_items:
+    - greenbone-security-assistant
+    - openvas-manager
+    - openvas-scanner
