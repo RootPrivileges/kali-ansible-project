@@ -1,7 +1,0 @@
----
-- name: Install Kali fuzzing metapackages
-  apt:
-    name:
-      - kali-tools-fuzzing
-      - kali-tools-reverse-engineering
-    state: present

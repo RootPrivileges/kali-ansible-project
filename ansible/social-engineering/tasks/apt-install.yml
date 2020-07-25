@@ -1,0 +1,6 @@
+---
+- name: Install Kali social engineering metapackage
+  apt:
+    name:
+      - kali-tools-social-engineering
+    state: present

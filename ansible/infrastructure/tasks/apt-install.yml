@@ -12,6 +12,7 @@
 - name: Install other infrastructure packages
   apt:
     name:
+      - armitage
       - finger
       - ldap-utils
       - ridenum

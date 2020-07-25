@@ -1,0 +1,6 @@
+---
+- name: Install Kali steganography metapackage
+  apt:
+    name:
+      - kali-tools-crypto-stego
+    state: present

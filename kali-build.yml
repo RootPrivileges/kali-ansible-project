@@ -3,8 +3,9 @@
   gather_facts: yes
   roles:
     - ansible/base-vm
+    - ansible/ctf
+    - ansible/exploit-development
     - ansible/forensics
-    - ansible/fuzzing
     - ansible/infrastructure
     - ansible/passwords
     - ansible/radio
